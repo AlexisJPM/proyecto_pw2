@@ -13,7 +13,6 @@ import { AuthService } from '../../services/auth-service';
 export class Formulario {
 
   private servicioUsuario = inject(UsuarioService);
-
   public servicioAuth = inject(AuthService);
 
   //Lista de usuarios reactiva

@@ -7,6 +7,8 @@ import { Mascotas } from './shared/mascotas/mascotas';
 import { Usuarios } from './features/usuarios/usuarios';
 import { Login } from './shared/login/login';
 import { authGuard } from './guards/auth-guard';
+import { matchGuard } from './guards/match-guard';
+import { Acerca } from './features/acerca/acerca';
 
 export const routes: Routes = [
     
@@ -14,9 +16,9 @@ export const routes: Routes = [
     {path:'', component:Home},
 
     //ruta de navegacio
-    {path:'acerca', component:Servicos},
-    {path:'consultas', component:Consultas},
-    {path:'mascotas', component:Mascotas},
+    {path:'acerca', component:Acerca},
+    {path:'consultas', component:Consultas, canMatch:[matchGuard]},
+    {path:'mascotas', component:Mascotas}, 
     {path:'registro', component:Usuarios, canActivate:[authGuard]},
     {path:'login', component:Login},
 

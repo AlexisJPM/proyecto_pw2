@@ -22,7 +22,7 @@ export class Login {
     this.servicioAuth.login(this.email, this.password).subscribe(success =>{
       if(success){
         alert('Bienvenido al sistema');
-        this.router.navigate(['/usuarios']);
+        this.router.navigate(['/registro']);
       }else{
         alert('Usuario Incorrecto');
       }
